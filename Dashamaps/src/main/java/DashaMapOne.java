@@ -43,16 +43,17 @@ public class DashaMapOne implements HashMapX{
 
     public void appendTo(String keyHash, Node newVal){
         for (Node n: alphaNodes) {
-            if(keyHash == hashFunctionOne(n.theKey)){
+            if(keyHash.equals(n.theKey)){
                 if(n.nextNode == null){
                     n.nextNode = newVal;
                     n.theValue++;
+                    break;
                 } else {
                     Node tempNode = n.nextNode;
                     for (int i = 0; i < n.theValue; i++) {
                         if(tempNode.nextNode == null){
                             tempNode.nextNode = newVal;
-                            tempNode.theValue++;
+                            n.theValue++;
                         }
                         else{
                             tempNode = tempNode.nextNode;

@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16758b06-b4a0-4f1d-844b-c1c64f8682b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dashamaps/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapThree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/HashMapX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashamaps/src/test/java/DashaMapOneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashamaps/src/test/java/NodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashamaps/src/main/java/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +54,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DashaMapOneTest.nodeArrayTest">
+  <component name="RunManager" selected="JUnit.NodeTest.nodeBuilderTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -106,6 +100,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NodeTest.nodeBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Dashamaps" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NodeTest" />
+      <option name="METHOD_NAME" value="nodeBuilderTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -133,6 +138,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NodeTest.nodeBuilderTest" />
         <item itemvalue="JUnit.DashaMapOneTest.nodeArrayTest" />
         <item itemvalue="JUnit.DashaMapOneTest.nodeArraySizeTest" />
         <item itemvalue="JUnit.DashaMapOneTest.nodeArrayGetValTest" />
@@ -151,7 +157,7 @@
       <updated>1565357944193</updated>
       <workItem from="1565357947238" duration="6000" />
       <workItem from="1565357963802" duration="4390000" />
-      <workItem from="1583683958988" duration="2613000" />
+      <workItem from="1583683958988" duration="4905000" />
     </task>
     <servers />
   </component>

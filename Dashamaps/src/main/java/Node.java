@@ -8,4 +8,17 @@ public class Node {
         this.theValue = theValue;
         this.nextNode = nextNode;
     }
+
+    public Node() {
+        this.theKey = "";
+        this.theValue = 0;
+        this.nextNode = null;
+    }
+
+
+
+
+    public Node createNewNode(String theKey, Integer theValue, Node nextNode){
+        return new Node(theKey,theValue,nextNode);
+    }
 }

@@ -8,11 +8,12 @@ public class DashaMapOne implements HashMapX{
             String myString = "";
             char myChar = (char) (97 + i);
             myString += myChar;
-            alphaNodes[i] = new Node(myString, null, null);
+            alphaNodes[i] = new Node(myString, 0, null);
         }
     }
 
     public void set(String key, Integer value) {
+        String keyHash = hashFunctionOne(key);
 
     }
 
@@ -40,10 +41,32 @@ public class DashaMapOne implements HashMapX{
         return alphaNodes;
     }
 
-    //    public String HashFunctionOne(String input) {
-//        if (input.length() > 0) {
-//            return String.toLowerCase(String.valueOf(input.charAt(0)));
-//        }
-//        return null;
-//    }
+    public void appendTo(String keyHash, Node newVal){
+        for (Node n: alphaNodes) {
+            if(keyHash == hashFunctionOne(n.theKey)){
+                if(n.nextNode == null){
+                    n.nextNode = newVal;
+                    n.theValue++;
+                } else {
+                    Node tempNode = n.nextNode;
+                    for (int i = 0; i < n.theValue; i++) {
+                        if(tempNode.nextNode == null){
+                            tempNode.nextNode = newVal;
+                            tempNode.theValue++;
+                        }
+                        else{
+                            tempNode = tempNode.nextNode;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public String hashFunctionOne(String input) {
+        if (input.length() > 0) {
+            return String.valueOf(input.charAt(0)).toLowerCase();
+        }
+        return null;
+    }
 }

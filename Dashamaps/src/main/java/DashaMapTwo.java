@@ -7,7 +7,7 @@ public class DashaMapTwo implements HashMapX{
         return null;
     }
 
-    public String get(String key) {
+    public Integer get(String key) {
         return null;
     }
 

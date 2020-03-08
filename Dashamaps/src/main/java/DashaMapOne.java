@@ -13,7 +13,6 @@ public class DashaMapOne implements HashMapX{
     }
 
     public void set(String key, Integer value) {
-        String keyHash = hashFunctionOne(key);
 
     }
 
@@ -21,16 +20,39 @@ public class DashaMapOne implements HashMapX{
         return null;
     }
 
-    public String get(String key) {
+    public Integer get(String key) {
+        for (Node n : alphaNodes) {
+            if(n.theKey.equals(hashFunctionOne(key))){
+                Node currentNode = n.nextNode;
+                for (int i = 0; i < n.theValue; i++) {
+                    if(currentNode.theKey.equalsIgnoreCase(key)){
+                        return currentNode.theValue;
+                    } else if(currentNode.nextNode == null){
+                        break;
+                    } else {
+                        currentNode = currentNode.nextNode;
+                    }
+                }
+            }
+        }
         return null;
     }
 
     public boolean isEmpty() {
-        return false;
+        for (Node n : alphaNodes) {
+            if(n.theValue > 0){
+                return false;
+            }
+        }
+        return true;
     }
 
     public long size() {
-        return 0;
+        long result = 0l;
+        for (Node n :alphaNodes) {
+           result += n.theValue;
+        }
+        return result;
     }
 
      public boolean bucketSize(String key) {

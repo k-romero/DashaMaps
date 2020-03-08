@@ -40,7 +40,7 @@ public class DashaMapOneTest {
     public void nodeAppendTest(){
         DashaMapOne map = new DashaMapOne();
         Node[] actual = map.getAlphaNodes();
-        map.appendTo("a",nodeBuilder.createNewNode("Here",1,null));
+        map.appendTo("a",nodeBuilder.createNewNode("ace",1,null));
         assertTrue(actual[0].nextNode.theKey.equals("Here"));
     }
 
@@ -48,7 +48,7 @@ public class DashaMapOneTest {
     public void nodeAppend1Test(){
         DashaMapOne map = new DashaMapOne();
         Node[] actual = map.getAlphaNodes();
-        map.appendTo("z",nodeBuilder.createNewNode("Here",1,null));
+        map.appendTo("z",nodeBuilder.createNewNode("zebra",1,null));
         assertTrue(actual[25].nextNode.theKey.equals("Here"));
     }
 
@@ -57,7 +57,7 @@ public class DashaMapOneTest {
         DashaMapOne map = new DashaMapOne();
         Node[] actual = map.getAlphaNodes();
         String noob = "Noob";
-        map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Here",1,null));
+        map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Noob",1,null));
         map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Still here!",1,null));
         assertTrue(actual[13].nextNode.nextNode.theKey.equals("Still here!"));
         assertTrue(actual[13].theValue == 2);
@@ -75,6 +75,53 @@ public class DashaMapOneTest {
         map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Still here!4",1,null));
         assertTrue(actual[13].nextNode.nextNode.nextNode.nextNode.nextNode.theKey.equals("Still here!4"));
         assertTrue(actual[13].theValue == 5);
+    }
+
+    @Test
+    public void isEmptyTest(){
+        DashaMapOne map = new DashaMapOne();
+        Node[] actual = map.getAlphaNodes();
+        assertTrue(map.isEmpty());
+    }
+
+    @Test
+    public void isEmptyFalseTest(){
+        DashaMapOne map = new DashaMapOne();
+        Node[] actual = map.getAlphaNodes();
+        String noob = "Noob";
+        map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Here",1,null));
+        assertFalse(map.isEmpty());
+    }
+
+    @Test
+    public void sizeTest(){
+        DashaMapOne map = new DashaMapOne();
+        Node[] actual = map.getAlphaNodes();
+        String noob = "Noob";
+        Long beforeAppendExpected = 0l;
+        Long beforeAppend = map.size();
+        map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Here",1,null));
+        map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Still here!1",1,null));
+        map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Still here!2",1,null));
+        map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Still here!3",1,null));
+        map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Still here!4",1,null));
+        Long afterAppendExpected = 5l;
+        Long afterAppend = map.size();
+        assertEquals(beforeAppendExpected,beforeAppend);
+        assertEquals(afterAppendExpected,afterAppend);
+        assertFalse(map.isEmpty());
+    }
+
+    @Test
+    public void getValueTest(){
+        DashaMapOne map = new DashaMapOne();
+        Node[] actual = map.getAlphaNodes();
+        map.appendTo(map.hashFunctionOne("nerf"),nodeBuilder.createNewNode("nerf",1,null));
+        map.appendTo(map.hashFunctionOne("nope"),nodeBuilder.createNewNode("nope",1,null));
+        map.appendTo(map.hashFunctionOne("next"),nodeBuilder.createNewNode("next",1,null));
+        map.appendTo(map.hashFunctionOne("nine"),nodeBuilder.createNewNode("nine",1,null));
+        map.appendTo(map.hashFunctionOne("Niagra"),nodeBuilder.createNewNode("niagra",6,null));
+        assertTrue(map.get("niagra") == 6);
     }
 
 

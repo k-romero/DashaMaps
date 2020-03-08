@@ -1,5 +1,5 @@
 public class DashaMapOne implements HashMapX{
-
+    Node nodeBuilder = new Node();
     Node[] alphaNodes;
 
     public DashaMapOne() {
@@ -13,7 +13,7 @@ public class DashaMapOne implements HashMapX{
     }
 
     public void set(String key, Integer value) {
-
+        this.appendTo(hashFunctionOne(key),nodeBuilder.createNewNode(key,value,null));
     }
 
     public String delete(String key) {

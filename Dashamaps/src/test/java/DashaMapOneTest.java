@@ -1,4 +1,10 @@
 import org.junit.Test;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 public class DashaMapOneTest {
 
@@ -80,14 +86,12 @@ public class DashaMapOneTest {
     @Test
     public void isEmptyTest(){
         DashaMapOne map = new DashaMapOne();
-        Node[] actual = map.getAlphaNodes();
         assertTrue(map.isEmpty());
     }
 
     @Test
     public void isEmptyFalseTest(){
         DashaMapOne map = new DashaMapOne();
-        Node[] actual = map.getAlphaNodes();
         String noob = "Noob";
         map.appendTo(map.hashFunctionOne(noob),nodeBuilder.createNewNode("Here",1,null));
         assertFalse(map.isEmpty());
@@ -96,7 +100,6 @@ public class DashaMapOneTest {
     @Test
     public void sizeTest(){
         DashaMapOne map = new DashaMapOne();
-        Node[] actual = map.getAlphaNodes();
         String noob = "Noob";
         Long beforeAppendExpected = 0l;
         Long beforeAppend = map.size();
@@ -115,13 +118,48 @@ public class DashaMapOneTest {
     @Test
     public void getValueTest(){
         DashaMapOne map = new DashaMapOne();
-        Node[] actual = map.getAlphaNodes();
         map.appendTo(map.hashFunctionOne("nerf"),nodeBuilder.createNewNode("nerf",1,null));
         map.appendTo(map.hashFunctionOne("nope"),nodeBuilder.createNewNode("nope",1,null));
         map.appendTo(map.hashFunctionOne("next"),nodeBuilder.createNewNode("next",1,null));
         map.appendTo(map.hashFunctionOne("nine"),nodeBuilder.createNewNode("nine",1,null));
         map.appendTo(map.hashFunctionOne("Niagra"),nodeBuilder.createNewNode("niagra",6,null));
         assertTrue(map.get("niagra") == 6);
+    }
+
+    @Test
+    public void setNewNodeTest(){
+        DashaMapOne map = new DashaMapOne();
+        map.set("Work",100);
+        assertTrue(map.size() == 1);
+        assertTrue(map.get("Work") == 100);
+    }
+
+    @Test
+    public void setMultipleNodesTest(){
+        DashaMapOne map = new DashaMapOne();
+        map.set("Work",100);
+        map.set("crazy", 75);
+        assertTrue(map.size() == 2);
+        assertTrue(map.get("crazy") == 75);
+    }
+
+    @Test
+    public void readFileTest() throws IOException {
+        DashaMapOne map = new DashaMapOne();
+        BufferedReader br = new BufferedReader(new FileReader("/Users/kromero/Dev/Projects/Labs/Week5Labs/DashaMaps/word-list.txt"));
+        //For debugging
+        long size = 0;
+        String line = br.readLine();
+        while (line != null) {
+            String[] keyValue = line.split(" ");
+            String key = keyValue[0];
+            Integer value = Integer.valueOf(keyValue[1]);
+            map.set(key, value);
+            line = br.readLine();
+            size = map.size();
+        }
+        assertTrue(map.size() == 124l);
+        assertTrue(map.get("just") == 12);
     }
 
 

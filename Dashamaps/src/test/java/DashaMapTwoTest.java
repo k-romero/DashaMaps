@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import static org.junit.Assert.*;
@@ -63,6 +64,7 @@ public class DashaMapTwoTest {
 
     @Test
     public void readFileTest() throws IOException {
+        FileWriter fw = new FileWriter("/Users/kromero/Dev/Projects/Labs/Week5Labs/DashaMaps/word-list-test.txt");
         BufferedReader br = new BufferedReader(new FileReader("/Users/kromero/Dev/Projects/Labs/Week5Labs/DashaMaps/word-list.txt"));
         //For debugging
         String line = br.readLine();
@@ -71,8 +73,27 @@ public class DashaMapTwoTest {
             String key = keyValue[0];
             Integer value = Integer.valueOf(keyValue[1]);
             map.set(key, value);
+
             line = br.readLine();
         }
+
+        for (Node n : map.getAlphaNodes()) {
+            Node currentNode = n;
+            if(currentNode.nextNode != null){
+                currentNode = currentNode.nextNode;
+                for (int i = 0; i < n.theValue; i++) {
+                    fw.write(currentNode.theKey + " " + currentNode.theValue + "\n");
+                    if(currentNode.nextNode != null){
+                        currentNode = currentNode.nextNode;
+                    } else {
+                        continue;
+                    }
+                }
+            }
+
+        }
+
+        fw.close();
         assertTrue(map.size() == 124l);
         assertTrue(map.get("just") == 12);
     }

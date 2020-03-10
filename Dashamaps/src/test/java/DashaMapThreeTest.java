@@ -24,14 +24,6 @@ public class DashaMapThreeTest {
         assertEquals("z",z);
     }
 
-    @Test
-    public void hashFunctionThreeTest(){
-        String actual = map.HashFunctionThree("Assert");
-        String expected = "s";
-        assertEquals(expected,actual);
-    }
-
-
 
     @Test
     public void nodeAppendTest(){

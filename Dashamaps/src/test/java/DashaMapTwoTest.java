@@ -48,9 +48,8 @@ public class DashaMapTwoTest {
 
     @Test
     public void nodeDeleteTest(){
-        long sizeBefore = map.size();
-        map.appendTo(map.hashFunctionTwo("Assert"),Node.createNewNode("Assert",25,null));
-        map.appendTo(map.hashFunctionTwo("Ssert"),Node.createNewNode("Ssert",25,null));
+        map.set("Assert", 20);
+        map.set("Ssert",25);
         map.set("Assign",100);
         assertEquals("Assert", map.alphaNodes[18].nextNode.theKey);
         assertEquals("Ssert", map.alphaNodes[18].nextNode.nextNode.theKey);

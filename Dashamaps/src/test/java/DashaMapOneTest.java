@@ -144,6 +144,22 @@ public class DashaMapOneTest {
     }
 
     @Test
+    public void nodeDeleteTest(){
+        DashaMapOne map = new DashaMapOne();
+        map.set("Assert", 20);
+        map.set("Asserting",25);
+        map.set("Asserted",100);
+        assertEquals("Assert", map.alphaNodes[0].nextNode.theKey);
+        assertEquals("Asserting", map.alphaNodes[0].nextNode.nextNode.theKey);
+        assertEquals("Asserted", map.alphaNodes[0].nextNode.nextNode.nextNode.theKey);
+        map.delete("Asserting");
+        long sizeAfter = map.size();
+        assertEquals(2,sizeAfter);
+        assertEquals("Asserted", map.alphaNodes[0].nextNode.nextNode.theKey);
+        assertNull(map.alphaNodes[0].nextNode.nextNode.nextNode);
+    }
+
+    @Test
     public void readFileTest() throws IOException {
         DashaMapOne map = new DashaMapOne();
         BufferedReader br = new BufferedReader(new FileReader("/Users/kromero/Dev/Projects/Labs/Week5Labs/DashaMaps/word-list.txt"));

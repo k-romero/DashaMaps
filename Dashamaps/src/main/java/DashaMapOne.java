@@ -1,5 +1,13 @@
 public class DashaMapOne extends DashaMap{
 
+
+    public String hashFunctionOne(String input) {
+        if (input.length() > 0) {
+            return String.valueOf(input.charAt(0)).toLowerCase();
+        }
+        return null;
+    }
+
     public void set(String key, Integer value) {
         this.appendTo(hashFunctionOne(key), Node.createNewNode(key,value,null));
     }
@@ -25,23 +33,6 @@ public class DashaMapOne extends DashaMap{
         return findIn(key).theValue;
     }
 
-    public boolean isEmpty() {
-        for (Node n : alphaNodes) {
-            if(n.theValue > 0){
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public long size() {
-        long result = 0l;
-        for (Node n :alphaNodes) {
-           result += n.theValue;
-        }
-        return result;
-    }
-
     public Node findIn(String keyLetter) {
         for (Node n : alphaNodes) {
             if(n.theKey.equals(hashFunctionOne(keyLetter))){
@@ -56,22 +47,6 @@ public class DashaMapOne extends DashaMap{
                     }
                 }
             }
-        }
-        return null;
-    }
-
-    public boolean bucketSize(String key) {
-        return false;
-    }
-
-    public Node[] getAlphaNodes() {
-        return alphaNodes;
-    }
-
-
-    public String hashFunctionOne(String input) {
-        if (input.length() > 0) {
-            return String.valueOf(input.charAt(0)).toLowerCase();
         }
         return null;
     }

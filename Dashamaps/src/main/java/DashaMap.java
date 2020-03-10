@@ -9,7 +9,7 @@ public abstract class DashaMap implements HashMapX{
             String myString = "";
             char myChar = (char) (97 + i);
             myString += myChar;
-            alphaNodes[i] = nodeBuilder.createNewNode(myString,0,null);
+            alphaNodes[i] = Node.createNewNode(myString,0,null);
         }
     }
 

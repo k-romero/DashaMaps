@@ -122,7 +122,7 @@ public class DashaMapOneTest {
         map.appendTo(map.hashFunctionOne("nope"),nodeBuilder.createNewNode("nope",1,null));
         map.appendTo(map.hashFunctionOne("next"),nodeBuilder.createNewNode("next",1,null));
         map.appendTo(map.hashFunctionOne("nine"),nodeBuilder.createNewNode("nine",1,null));
-        map.appendTo(map.hashFunctionOne("Niagra"),nodeBuilder.createNewNode("niagra",6,null));
+        map.appendTo(map.hashFunctionOne("niagra"),nodeBuilder.createNewNode("niagra",6,null));
         assertTrue(map.get("niagra") == 6);
     }
 

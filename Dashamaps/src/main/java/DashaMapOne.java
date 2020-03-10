@@ -1,34 +1,17 @@
-public class DashaMapOne implements HashMapX{
-    Node nodeBuilder = new Node();
-    Node[] alphaNodes;
-
-    public DashaMapOne() {
-        this.alphaNodes = new Node[26];
-        for (int i = 0; i < 26; i++) {
-            String myString = "";
-            char myChar = (char) (97 + i);
-            myString += myChar;
-            alphaNodes[i] = new Node(myString, 0, null);
-        }
-    }
+public class DashaMapOne extends DashaMap{
 
     public void set(String key, Integer value) {
-        this.appendTo(hashFunctionOne(key),nodeBuilder.createNewNode(key,value,null));
+        this.appendTo(hashFunctionOne(key), Node.createNewNode(key,value,null));
     }
 
     public String delete(String key) {
-        return null;
-    }
-
-    public Integer get(String key) {
         for (Node n : alphaNodes) {
             if(n.theKey.equals(hashFunctionOne(key))){
-                Node currentNode = n.nextNode;
+                Node currentNode = n;
                 for (int i = 0; i < n.theValue; i++) {
-                    if(currentNode.theKey.equalsIgnoreCase(key)){
-                        return currentNode.theValue;
-                    } else if(currentNode.nextNode == null){
-                        break;
+                    if(currentNode.nextNode.theKey.equals(key)){
+                        currentNode.nextNode = currentNode.nextNode.nextNode;
+                        n.theValue--;
                     } else {
                         currentNode = currentNode.nextNode;
                     }
@@ -36,6 +19,10 @@ public class DashaMapOne implements HashMapX{
             }
         }
         return null;
+    }
+
+    public Integer get(String key) {
+        return findIn(key).theValue;
     }
 
     public boolean isEmpty() {
@@ -56,17 +43,18 @@ public class DashaMapOne implements HashMapX{
     }
 
     public Node findIn(String keyLetter) {
-        return null;
-    }
-
-    public void appendTo(Node slot, String keyHash, Node newVal) {
-
-    }
-
-    public Node findIn(Node[] alphaNodes, String keyword) {
         for (Node n : alphaNodes) {
-            if(hashFunctionOne(keyword).equalsIgnoreCase(n.theKey)){
-                return n;
+            if(n.theKey.equals(hashFunctionOne(keyLetter))){
+                Node currentNode = n.nextNode;
+                for (int i = 0; i < n.theValue; i++) {
+                    if(currentNode.theKey.equalsIgnoreCase(keyLetter)){
+                        return currentNode;
+                    } else if(currentNode.nextNode == null){
+                        break;
+                    } else {
+                        currentNode = currentNode.nextNode;
+                    }
+                }
             }
         }
         return null;
@@ -80,28 +68,6 @@ public class DashaMapOne implements HashMapX{
         return alphaNodes;
     }
 
-    public void appendTo(String keyHash, Node newVal){
-        for (Node n: alphaNodes) {
-            if(keyHash.equals(n.theKey)){
-                if(n.nextNode == null){
-                    n.nextNode = newVal;
-                    n.theValue++;
-                    break;
-                } else {
-                    Node tempNode = n.nextNode;
-                    for (int i = 0; i < n.theValue; i++) {
-                        if(tempNode.nextNode == null){
-                            tempNode.nextNode = newVal;
-                            n.theValue++;
-                        }
-                        else{
-                            tempNode = tempNode.nextNode;
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     public String hashFunctionOne(String input) {
         if (input.length() > 0) {

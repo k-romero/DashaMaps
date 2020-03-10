@@ -11,10 +11,23 @@ public class DashaMapTwo extends DashaMap{
     }
 
     public void set(String key, Integer value) {
-        appendTo(hashFunctionTwo(key),nodeBuilder.createNewNode(key,value,null));
+        appendTo(hashFunctionTwo(key), Node.createNewNode(key,value,null));
     }
 
     public String delete(String key) {
+        for (Node n : alphaNodes) {
+            if(n.theKey.equals(hashFunctionTwo(key))){
+                Node currentNode = n;
+                for (int i = 0; i < n.theValue; i++) {
+                    if(currentNode.nextNode.theKey.equals(key)){
+                        currentNode.nextNode = currentNode.nextNode.nextNode;
+                        n.theValue--;
+                    } else {
+                        currentNode = currentNode.nextNode;
+                    }
+                }
+            }
+        }
         return null;
     }
 

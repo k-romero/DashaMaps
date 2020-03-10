@@ -5,8 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class DashaMapTwoTest {
 
@@ -44,6 +43,22 @@ public class DashaMapTwoTest {
         assertEquals(0,sizeBefore);
         assertEquals(1,sizeAfter);
         assertEquals("Assert",map.alphaNodes[18].nextNode.theKey);
+    }
+
+    @Test
+    public void nodeDeleteTest(){
+        long sizeBefore = map.size();
+        map.appendTo(map.hashFunctionTwo("Assert"),Node.createNewNode("Assert",25,null));
+        map.appendTo(map.hashFunctionTwo("Ssert"),Node.createNewNode("Ssert",25,null));
+        map.set("Assign",100);
+        assertEquals("Assert", map.alphaNodes[18].nextNode.theKey);
+        assertEquals("Ssert", map.alphaNodes[18].nextNode.nextNode.theKey);
+        assertEquals("Assign", map.alphaNodes[18].nextNode.nextNode.nextNode.theKey);
+        map.delete("Ssert");
+        long sizeAfter = map.size();
+        assertEquals(2,sizeAfter);
+        assertEquals("Assign", map.alphaNodes[18].nextNode.nextNode.theKey);
+        assertNull(map.alphaNodes[18].nextNode.nextNode.nextNode);
     }
 
     @Test

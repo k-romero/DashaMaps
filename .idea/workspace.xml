@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16758b06-b4a0-4f1d-844b-c1c64f8682b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashamaps/src/test/java/DashaMapThreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dashamaps/src/test/java/DashaMapTwoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapThree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/DashaMapTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/src/main/java/HashMapX.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/HashMapX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/src/main/java/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/src/main/java/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/src/test/java/DashaMapOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/src/test/java/DashaMapOneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/target/classes/DashaMapOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/target/classes/DashaMapOne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/target/classes/DashaMapThree.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/target/classes/DashaMapThree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashamaps/src/test/java/DashaMapTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/src/test/java/DashaMapTwoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashamaps/target/classes/DashaMapTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/target/classes/DashaMapTwo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/target/classes/HashMapX.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/target/classes/HashMapX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/target/classes/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/target/classes/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/target/test-classes/DashaMapOneTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/target/test-classes/DashaMapOneTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashamaps/target/test-classes/NodeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/target/test-classes/NodeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashamaps/target/test-classes/DashaMapTwoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Dashamaps/target/test-classes/DashaMapTwoTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +55,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DashaMapTwoTest.readFileTest">
+  <component name="RunManager" selected="JUnit.DashaMapTwoTest.nodeDeleteTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -91,17 +79,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DashaMapThreeTest.nodeArrayGetValTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Dashamaps" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DashaMapThreeTest" />
-      <option name="METHOD_NAME" value="nodeArrayGetValTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DashaMapTwoTest.hashFunctionThreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Dashamaps" />
       <option name="PACKAGE_NAME" value="" />
@@ -118,6 +95,17 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DashaMapTwoTest" />
       <option name="METHOD_NAME" value="nodeAppendTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DashaMapTwoTest.nodeDeleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Dashamaps" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DashaMapTwoTest" />
+      <option name="METHOD_NAME" value="nodeDeleteTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -162,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DashaMapTwoTest.nodeDeleteTest" />
         <item itemvalue="JUnit.DashaMapTwoTest.readFileTest" />
         <item itemvalue="JUnit.DashaMapTwoTest.nodeAppendTest" />
         <item itemvalue="JUnit.DashaMapTwoTest.hashFunctionThreeTest" />
         <item itemvalue="JUnit.DashaMapThreeTest.hashFunctionThreeTest" />
-        <item itemvalue="JUnit.DashaMapThreeTest.nodeArrayGetValTest" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +171,7 @@
       <workItem from="1565357947238" duration="6000" />
       <workItem from="1565357963802" duration="4390000" />
       <workItem from="1583683958988" duration="17127000" />
-      <workItem from="1583845478131" duration="3653000" />
+      <workItem from="1583845478131" duration="5364000" />
     </task>
     <servers />
   </component>
@@ -199,30 +187,30 @@
     </state>
     <state x="778" y="240" key="#com.intellij.ide.util.MemberChooser/-1280.23.1280.735/0.23.1920.1057@0.23.1920.1057" timestamp="1583686138654" />
     <state x="778" y="231" key="#com.intellij.ide.util.MemberChooser/-1280.23.1280.777/0.23.1920.1015@0.23.1920.1015" timestamp="1583846423563" />
-    <state width="1238" height="98" key="GridCell.Tab.0.bottom" timestamp="1583851306589">
+    <state width="1238" height="179" key="GridCell.Tab.0.bottom" timestamp="1583853231185">
       <screen x="0" y="23" width="1280" height="735" />
     </state>
     <state width="1846" height="213" key="GridCell.Tab.0.bottom/-1280.23.1280.735/0.23.1920.1057@0.23.1920.1057" timestamp="1583698235297" />
     <state width="1846" height="196" key="GridCell.Tab.0.bottom/-1280.23.1280.777/0.23.1920.1015@0.23.1920.1015" timestamp="1583846747501" />
-    <state width="1238" height="98" key="GridCell.Tab.0.bottom/0.23.1280.735@0.23.1280.735" timestamp="1583851306589" />
-    <state width="1238" height="98" key="GridCell.Tab.0.center" timestamp="1583851306588">
+    <state width="1238" height="179" key="GridCell.Tab.0.bottom/0.23.1280.735@0.23.1280.735" timestamp="1583853231185" />
+    <state width="1238" height="179" key="GridCell.Tab.0.center" timestamp="1583853231184">
       <screen x="0" y="23" width="1280" height="735" />
     </state>
     <state width="1846" height="213" key="GridCell.Tab.0.center/-1280.23.1280.735/0.23.1920.1057@0.23.1920.1057" timestamp="1583698235296" />
     <state width="1846" height="196" key="GridCell.Tab.0.center/-1280.23.1280.777/0.23.1920.1015@0.23.1920.1015" timestamp="1583846747500" />
-    <state width="1238" height="98" key="GridCell.Tab.0.center/0.23.1280.735@0.23.1280.735" timestamp="1583851306588" />
-    <state width="1238" height="98" key="GridCell.Tab.0.left" timestamp="1583851306587">
+    <state width="1238" height="179" key="GridCell.Tab.0.center/0.23.1280.735@0.23.1280.735" timestamp="1583853231184" />
+    <state width="1238" height="179" key="GridCell.Tab.0.left" timestamp="1583853231184">
       <screen x="0" y="23" width="1280" height="735" />
     </state>
     <state width="1846" height="213" key="GridCell.Tab.0.left/-1280.23.1280.735/0.23.1920.1057@0.23.1920.1057" timestamp="1583698235296" />
     <state width="1846" height="196" key="GridCell.Tab.0.left/-1280.23.1280.777/0.23.1920.1015@0.23.1920.1015" timestamp="1583846747500" />
-    <state width="1238" height="98" key="GridCell.Tab.0.left/0.23.1280.735@0.23.1280.735" timestamp="1583851306587" />
-    <state width="1238" height="98" key="GridCell.Tab.0.right" timestamp="1583851306588">
+    <state width="1238" height="179" key="GridCell.Tab.0.left/0.23.1280.735@0.23.1280.735" timestamp="1583853231184" />
+    <state width="1238" height="179" key="GridCell.Tab.0.right" timestamp="1583853231185">
       <screen x="0" y="23" width="1280" height="735" />
     </state>
     <state width="1846" height="213" key="GridCell.Tab.0.right/-1280.23.1280.735/0.23.1920.1057@0.23.1920.1057" timestamp="1583698235296" />
     <state width="1846" height="196" key="GridCell.Tab.0.right/-1280.23.1280.777/0.23.1920.1015@0.23.1920.1015" timestamp="1583846747501" />
-    <state width="1238" height="98" key="GridCell.Tab.0.right/0.23.1280.735@0.23.1280.735" timestamp="1583851306588" />
+    <state width="1238" height="179" key="GridCell.Tab.0.right/0.23.1280.735@0.23.1280.735" timestamp="1583853231185" />
     <state width="1846" height="302" key="GridCell.Tab.1.bottom" timestamp="1583800566953">
       <screen x="0" y="23" width="1920" height="1015" />
     </state>

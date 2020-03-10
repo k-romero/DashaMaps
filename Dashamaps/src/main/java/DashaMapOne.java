@@ -55,7 +55,24 @@ public class DashaMapOne implements HashMapX{
         return result;
     }
 
-     public boolean bucketSize(String key) {
+    public Node findIn(String keyLetter) {
+        return null;
+    }
+
+    public void appendTo(Node slot, String keyHash, Node newVal) {
+
+    }
+
+    public Node findIn(Node[] alphaNodes, String keyword) {
+        for (Node n : alphaNodes) {
+            if(hashFunctionOne(keyword).equalsIgnoreCase(n.theKey)){
+                return n;
+            }
+        }
+        return null;
+    }
+
+    public boolean bucketSize(String key) {
         return false;
     }
 

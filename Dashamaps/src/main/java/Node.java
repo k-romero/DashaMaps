@@ -9,6 +9,8 @@ public class Node {
         this.nextNode = nextNode;
     }
 
+    //necessary for node builder
+
     public Node() {
         this.theKey = "";
         this.theValue = 0;
@@ -16,9 +18,7 @@ public class Node {
     }
 
 
-
-
-    public Node createNewNode(String theKey, Integer theValue, Node nextNode){
+    public static Node createNewNode(String theKey, Integer theValue, Node nextNode){
         return new Node(theKey,theValue,nextNode);
     }
 }

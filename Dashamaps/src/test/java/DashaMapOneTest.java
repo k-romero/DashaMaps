@@ -47,7 +47,7 @@ public class DashaMapOneTest {
         DashaMapOne map = new DashaMapOne();
         Node[] actual = map.getAlphaNodes();
         map.appendTo("a",nodeBuilder.createNewNode("ace",1,null));
-        assertTrue(actual[0].nextNode.theKey.equals("Here"));
+        assertTrue(actual[0].nextNode.theKey.equals("ace"));
     }
 
     @Test
@@ -55,7 +55,7 @@ public class DashaMapOneTest {
         DashaMapOne map = new DashaMapOne();
         Node[] actual = map.getAlphaNodes();
         map.appendTo("z",nodeBuilder.createNewNode("zebra",1,null));
-        assertTrue(actual[25].nextNode.theKey.equals("Here"));
+        assertTrue(actual[25].nextNode.theKey.equals("zebra"));
     }
 
     @Test
